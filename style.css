@@ -1,0 +1,126 @@
+input {
+	background-color: lightblue;
+	text-align: center;
+}
+
+.user-button{
+	background-color: green;
+	width: 100px;
+	border-radius: 10px;
+	border: 2px solid black;
+	padding: 20px;
+}
+
+.user-button:hover{
+	background-color:yellow;
+}
+
+.current_user{
+	font-size:2em;
+	height:50px;	
+}
+
+.correct{
+	color: black;
+}
+
+.incorrect{
+	color: red;
+}
+
+.lesson-text{
+	font-family:"Anonymous Pro","Lucida Console", Monaco, monospace;
+	font-size:2em;
+	height:50px;
+	background-color:yellow;
+}
+.typed-text{
+	font-family:"Anonymous Pro", Monaco, monospace;
+	font-size:2em;
+	height:50px;
+	background-color:lightblue;
+	
+}
+
+#user_select{
+	background-color: lightblue;
+	width: 300px;
+	height: 200px;
+	border-radius: 25px;
+	border: 2px solid black;
+	padding: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: 100px;
+	margin-left: 100px;
+	
+}
+
+.screen-keyboard{
+	background-color: lightgray;
+	width: 875px;
+	height:500px;
+	border-radius:25px;
+	
+}
+
+.screen-key{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+	font-size:60px;
+	line-height:50px;
+	text-align:center;
+	vertical-align:middle;
+	padding: 10px;
+	font-family:Arial;
+	
+	animation-name: wiggle;
+	animation-duration: 0s;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+	/*transform: rotate(10deg);*/
+	
+}
+
+@keyframes wiggle {
+    from {transform: rotate(-7deg);}
+    to {transform: rotate(7deg);}
+}
+
+
+.key-decoration{
+	position:absolute;
+	width:50px;
+	padding:10px;
+	left:-7px;
+	top:0px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:80px;
+	color:white;
+
+}
+
+.key-letter{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+	font-size:60px;
+	line-height:50px;
+	text-align:center;
+	vertical-align:middle;
+	padding: 10px;
+	font-family:Arial;
+}
+
+.debug{
+	height:300;
+	overflow:scroll;
+	
+}
