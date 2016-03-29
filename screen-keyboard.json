@@ -1,0 +1,35 @@
+{
+	"rows": [{
+			"name": "top",
+			"position": 0,
+			"keys": [{
+					"text": "Q",
+					"homerow": false
+				}, {
+					"text": "W",
+					"homerow": false
+				}
+
+
+			]
+		},
+
+		{
+			"name": "middle",
+			"position": 1,
+			"keys": [{
+					"text": "A",
+					"homerow": true
+				}, {
+					"text": "S",
+					"homerow": true
+				}
+
+
+			]
+		}
+	]
+
+
+
+}
