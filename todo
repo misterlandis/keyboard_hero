@@ -1,0 +1,47 @@
+
+Lesson Creator
+- The teacher creates lessons through a PHP page.
+-- Lessons are stored in a mySQL table.
+- Lessons can have other lessons named as prerequisites.
+- The student chooses his or her lesson from a menu before beginning. 
+- Lessons have objectives
+- Lesson text can be generated in multiple ways
+	- letter shuffle
+	- word shuffle
+	- static text
+- Teacher page assists teacher in writing static texts
+	- only using allowed characters
+		- marks forbidden characters
+		- suggests words
+	- maintaining certain character percentages
+		-report character percentage
+
+Student Accounts
++ The teacher can create new students
+- The teacher can import students from a .csv or similar
+- Student accounts track lesson progress
+- creating / importing duplicate students triggers a class move
+
+Student GUI
+- Home row keys are marked
+- GUI indicates which finger the student should use
+
+Messaging
+- Teacher can quickly send pre-determined messages
+
+Self Assessment
+- Student is prompted to rate herself on technique, accuracy, etc.
+
+Advanced activities
+- Mechanism to discourage activity hopping
+- Free writing
+	- word counter / goal
+	- detect keyboard mashing
+	
+Widgets
+- Widgets appear to the right of the GUI
+- Teacher can assign widgets to a student
+- Pomodoro widget
+- Bathroom queue widget
+- white noise widget
+- metronome widget
