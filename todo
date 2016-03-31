@@ -1,10 +1,22 @@
 
 Lesson Creator
-- The teacher creates lessons through a PHP page.
--- Lessons are stored in a mySQL table.
-- Lessons can have other lessons named as prerequisites.
++ The teacher creates lessons through a PHP page.
++ Lessons are stored in a mySQL table.
++ Lessons can have other lessons named as prerequisites.
 - The student chooses his or her lesson from a menu before beginning. 
 - Lessons have objectives
+	- Earn positive mark X Y times
+		- implemented in client
+	- Type character X correctly Y times
+		- implemented in client
+	- Type X words
+		- implemented in client
+	- Type X characters
+		- implemented in client
+	- Complete the lesson text
+		- implemented in client
+	- Maintain speed X for Y seconds
+		- implemented in client
 - Lesson text can be generated in multiple ways
 	- letter shuffle
 	- word shuffle

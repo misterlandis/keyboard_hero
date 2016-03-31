@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	$("#save-lesson").click(function(){
 		//save the lesson as loaded
-		
+		saveCurrentLesson();
 		
 		
 	});
@@ -11,6 +11,7 @@ $(document).ready(function(){
 })
 
 function getLessonList(){
+	
 	$.ajax({
 		dataType: "json",
 		url: "list-lessons.php", 
@@ -22,16 +23,17 @@ function getLessonList(){
 }
 
 function lessonListReturned(data){
-	//console.log(data[0]);
+	
 	
 	$lm = $("#lesson-menu");
-	$lm.html("")
+	$lm.html("");
 	
 	$pq = $("#prerequisites");
+	$pq.html("");
 	//set up the buttons
 	$.each(data, function(index, lesson){
 		//set up lesson slect buttons
-		console.log(lesson);
+		
 		
 		$lesson = $("<div class = 'lesson-button'>" +
 			lesson.title +
@@ -43,7 +45,7 @@ function lessonListReturned(data){
 		
 		$lm.append($lesson);
 		//set up checkboxes for prereqs
-		$checkbox = $("<input type = 'checkbox' name ='required' value = '" + lesson.id + "'> ");
+		$checkbox = $("<input type = 'checkbox' class ='required' value = '" + lesson.id + "'> ");
 		$pq.append($checkbox);
 		$pq.append(lesson.title)
 		$pq.append("<br/>")
@@ -88,12 +90,59 @@ function lessonReturned(data){
 	
 	$("#objectives").val(data.objectives);
 	$("#content").val(data.content);
-	console.log(data.visible);
+	//console.log(data.visible);
 	if(data.visible == 1){
 		$(":checkbox[value=visible]").prop("checked","true");
 	}
+}
+
+function saveCurrentLesson(){
+	var id = $("#lesson-id").val();
+	var title = $("#title").val();
+	var type = $("#type").val();
+	
+	var prerequisites = [];
+	var checkboxes = $(".required:checkbox:checked")
+	//get prerequisites from checkbox states
+	checkboxes.each(
+		function(id,checkbox){
+			prerequisites.push(checkbox.value);
+		}
+	);
+	
+	var objectives = $("#objectives").val();
+	var content = $("#content").val();
+	
+	var visible;
+	
+	if($("#visible").is(":checked")){
+		visible = 1;
+	}
+	else{
+		visible = 0;
+	}
+	
+	$.ajax({
+		url:"save-lesson.php",
+		method:"get",
+		data:{
+			"id":id,
+			"title":title,
+			"type":type,
+			"prerequisites":prerequisites.join(","),
+			"objectives":objectives,
+			"content":content,
+			"visible":visible
+		},
+		success: function(data,status){
+			
+			//debug: display response from server
+			//$("#debug").html(data);
+			getLessonList();
+		}
+	
+	})
 	
 	
-	
-	
+
 }

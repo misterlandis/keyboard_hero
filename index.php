@@ -4,6 +4,8 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="screen-key.js"></script>
+<!--<script src="screen-keyboard.js"></script>-->
 <script src="kh.js"></script>
 
 <!--jgrowl-->
@@ -22,10 +24,7 @@
 <div class = "current_user"></div>
 <div class = "lesson-text"></div>
 <div class = "typed-text"></div>
-<div class = "screen-keyboard"></div>
-<div class = "typing_field_container">
-<input type = "text" id = "typing_field">
-</div>
+<div class = "screen-keyboard noselect"></div>
 <div class = "messages">
 <div>
 </body>

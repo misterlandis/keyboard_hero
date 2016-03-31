@@ -1,6 +1,10 @@
-input {
-	background-color: lightblue;
-	text-align: center;
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently*/                                 not supported by any browser */
 }
 
 .user-button{
@@ -57,25 +61,35 @@ input {
 	
 }
 
+body{
+	margin-left:100px;
+	margin-right:100px;
+	background-image: url("bg.jpg");
+	background-size: 200vw;
+}
+
 .screen-keyboard{
-	background-color: lightgray;
-	width: 875px;
-	height:500px;
+	float:left;
+	margin:2vw;
+	background-color: rgba(255,255,255,0.2);
+	padding:1vw;
 	border-radius:25px;
 	
 }
 
+.screen-keyboard-row{
+	clear:left;
+	
+}
+
 .screen-key{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	border-radius: 15px;
-	font-size:60px;
-	line-height:50px;
+	margin:0.25vw;
+	float:left;
+	width: 4vw;
+	height: 4vw;
+	border-radius: 1vw;
+	line-height:4.1vw;
 	text-align:center;
-	vertical-align:middle;
-	padding: 10px;
-	font-family:Arial;
 	
 	animation-name: wiggle;
 	animation-duration: 0s;
@@ -85,9 +99,80 @@ input {
 	
 }
 
+.red{
+	background-color: red;
+}
+
+.blue{
+	background-color: 3333FF;
+}
+
+.orange{
+	background-color: orange;
+}
+
+.magenta{
+	background-color: magenta;
+}
+
+.yellow{
+	background-color: yellow;
+}
+
+.green{
+	background-color: green;
+}
+
+.pink{
+	background-color: FF87C7;
+}
+
+.cyan{
+	background-color:cyan;
+}
+
+.brown{
+	background-color:C09080;
+}
+
+.shift{
+	width: 8vw;
+	
+}
+.space{
+	width: 24vw;
+	margin-left: 17vw;
+	animation-name: space-wiggle;
+}
+
+#top-row{
+	margin-left:4vw;
+}
+
+#middle-row{
+	margin-left: 6vw;
+}
+
+#bottom-row{
+	margin-left: 0vw;
+}
+
+
+
 @keyframes wiggle {
-    from {transform: rotate(-7deg);}
-    to {transform: rotate(7deg);}
+    from {
+		transform: rotate(-7deg);
+		transform: scale(1.1); 
+	}
+    to {
+		transform: rotate(7deg);
+		transform: scale(0.9);
+	}
+}
+
+@keyframes space-wiggle {
+    from {transform: rotate(-3deg);}
+    to {transform: rotate(3deg);}
 }
 
 
@@ -105,17 +190,10 @@ input {
 }
 
 .key-letter{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width: 50px;
-	height: 50px;
-	border-radius: 15px;
-	font-size:60px;
-	line-height:50px;
+	font-size:3.5vw;
 	text-align:center;
 	vertical-align:middle;
-	padding: 10px;
+	
 	font-family:Arial;
 }
 
@@ -123,4 +201,24 @@ input {
 	height:300;
 	overflow:scroll;
 	
+}
+
+.lesson-button{
+	width:8vw;
+	height:2vw;
+	float:left;
+	background-color:00FF00;
+	margin:.2vw;
+	border-radius:.5vw;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.lesson-button:hover{
+	background-color:yellow
+}
+
+form{
+	clear:left;
+	margin: 2vw;
 }
