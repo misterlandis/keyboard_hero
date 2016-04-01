@@ -42,6 +42,7 @@ Messaging
 - Teacher can quickly send pre-determined messages
 
 Self Assessment
+- typing journal
 - Student is prompted to rate herself on technique, accuracy, etc.
 
 Advanced activities
@@ -49,6 +50,12 @@ Advanced activities
 - Free writing
 	- word counter / goal
 	- detect keyboard mashing
+	- print results when goal is achieved
+	- 
+
+Known Bugs
+- Shift key animation sticks on when mashing keys
+	
 	
 Widgets
 - Widgets appear to the right of the GUI
@@ -57,3 +64,4 @@ Widgets
 - Bathroom queue widget
 - white noise widget
 - metronome widget
+- jukebox widget

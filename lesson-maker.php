@@ -23,7 +23,13 @@
 	<br/>
 	Prerequisites:<div id = "prerequisites"></div>
 	<br/>
+	<div id = "objectives-area">
 	Objectives: <input type="text" id= "objectives" placeholder="objectives"></input>
+	<br/>
+
+	</div>
+	<input type = "button" id = "new-objective-button" value = "new objective">
+	
 	<br/>
 	Content:<textarea rows = "4", cols = "50" id="content"></textarea>
 	<br/>
