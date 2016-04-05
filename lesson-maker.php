@@ -24,7 +24,7 @@
 	Prerequisites:<div id = "prerequisites"></div>
 	<br/>
 	<div id = "objectives-area">
-	Objectives: <input type="text" id= "objectives" placeholder="objectives"></input>
+	Objectives: <input type="text" id= "objectives" placeholder="objectives" size = "200"></input>
 	<br/>
 
 	</div>

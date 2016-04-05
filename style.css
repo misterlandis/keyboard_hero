@@ -222,3 +222,7 @@ form{
 	clear:left;
 	margin: 2vw;
 }
+
+input[type=number]{
+    width: 50px;
+} 
